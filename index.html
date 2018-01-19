@@ -1,79 +1,51 @@
-<!--
-Au<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Chen Donghui's Homepage</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="My Skills Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<!---- start-smoth-scrolling---->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
- <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
-		});
-	</script>
-<!---End-smoth-scrolling---->
-     <style type="text/css">
+---
+layout: page
+description: "Thinking will not overcome fear but action will."
+---
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d86ff4facc8fa167a2106de5391b2e6a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
-    .image1{ 
-        width:160px; 
-        height:168px; 
-        border-radius:30px; 
-    }
-    </style>
-</head>
-<body>
-		<!--start-header-section-->
-			<div class="header-section">
-				<div class="continer">
-					<img  class='image1' src="images/chendh.jpg">
-					<h4 class="email">Email: <a href="mailto:chendh@zju.edu.cn">chendh@zju.edu.cn</a></h4><br>
-					<h4 class="tel">Tel: (+86) 137******</h4>
-					<div class="about">	
-							<p>Hello! I am Chen Donghui, a Ph.D candidate in the <a href='http://percom.zju.edu.cn/index-en.html'>Pervasive Computing Lab</a> at <a href='http://cspo.zju.edu.cn/english/'>College of Computer Science & </p>
-							<p>Technology</a>, <a href='http://www.zju.edu.cn/english/'>Zhejiang University</a>, Hangzhou, China. My advisor is <a href='http://mypage.zju.edu.cn/lc'>Prof. Ling Chen</a>.</p>
-					</div>
-				</div>
-			</div>
-		<!--end header-section-->
-			<!--start-study-section-->
-			<div class="study-section">
-				<div class="container">
-					<div class="study-grids">
-						<div class="col-md-6 study-grid">
-						<h3>education</h3>
-						<div class="study1">
-							<p>Pervasive Computing Lab in College of Computer Science & Technology, Zhejiang University.<label>( 2016- )</label></p>
-							<p>Computer Science & Technology, Taiyuan University of Technology.<label>( 2012-2016 )</label></p>
-						</div>
-						</div>
-						<div class="col-md-6 study-grid">
-						<h3>research interest</h3>
-						<div class="study2">
-							<p>Approximate Query Processing, Query Optimization, and Big Data.</p>
-							<p></label></p>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
-			<!--end study-section-->
-</body>
-</html> 
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {{ post.content | strip_html | truncate:200 }}
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
