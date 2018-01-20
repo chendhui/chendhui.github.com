@@ -35,6 +35,8 @@ header-img: "img/post-bg-rwd.jpg"
         <li><a href="https://www.douban.com/group/topic/45827434/">如何培养好习惯</a></li>
     </ul>
 </div>
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155520"></script>
 
 <!-- English Version -->
 <!-- <div class="en post-container">
@@ -97,11 +99,13 @@ header-img: "img/post-bg-rwd.jpg"
     _render();
 </script>
 
+{% if site.youyan.enable %}
 <!-- 璇勮绯荤粺 BEGIN -->
 <!-- UY BEGIN -->
 <div id="uyan_frame"></div>
 <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155520"></script>
 <!-- UY END -->
+{% endif %}
 
 <!-- Gitalk 评论 start  -->
 {% if site.gitalk.enable %}
