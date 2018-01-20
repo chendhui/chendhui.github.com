@@ -64,14 +64,14 @@ gitment:
   enable: true    
   
 # Gitalk
-#gitalk:
-#  enable: true    #是否开启Gitalk评论
-#  clientID: f2c84e7629bb1446c1a4   #生成的clientID
-#  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d  #同上
-#  repo: chendhui.github.io    #仓库名称
-#  owner: chendhui    #github用户名
-#  admin: chendhui
-#  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: d726ce09d11c6855f5cb   #生成的clientID
+  clientSecret: 02415cc7b7b6202bb6c33538e03a62dab0c0537a  #同上
+  repo: chendhui.github.io    #仓库名称
+  owner: chendhui    #github用户名
+  admin: chendhui
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
 # 统计
