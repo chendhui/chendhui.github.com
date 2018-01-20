@@ -35,8 +35,6 @@ header-img: "img/post-bg-rwd.jpg"
         <li><a href="https://www.douban.com/group/topic/45827434/">如何培养好习惯</a></li>
     </ul>
 </div>
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155520"></script>
 
 <!-- English Version -->
 <!-- <div class="en post-container">
@@ -99,12 +97,24 @@ header-img: "img/post-bg-rwd.jpg"
     _render();
 </script>
 
-{% if site.youyan.enable %}
-<!-- 璇勮绯荤粺 BEGIN -->
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155520"></script>
-<!-- UY END -->
+{% if site.gitment.enable %}
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+<script>
+var gitment = new Gitment({
+ id: 'location.href',
+ owner: 'chendhui',
+ repo: 'chendhui.github.io',
+ oauth: {
+ client_id: 'd726ce09d11c6855f5cb',
+ client_secret: '02415cc7b7b6202bb6c33538e03a62dab0c0537a',
+ },
+})
+gitment.render('container')
+</script>
 {% endif %}
 
 <!-- Gitalk 评论 start  -->
