@@ -60,8 +60,8 @@ kramdown:
   disqus_username: chendh
 
   
-gitment:
-  enable: true    
+#gitment:
+#  enable: true    
   
 # Gitalk
 gitalk:

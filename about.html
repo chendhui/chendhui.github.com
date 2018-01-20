@@ -97,29 +97,10 @@ header-img: "img/post-bg-rwd.jpg"
     _render();
 </script>
 
-{% if site.gitment.enable %}
-<div id="container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-
-<script>
-var gitment = new Gitment({
- id: 'location.href',
- owner: 'chendhui',
- repo: 'chendhui.github.io',
- oauth: {
- client_id: 'd726ce09d11c6855f5cb',
- client_secret: '02415cc7b7b6202bb6c33538e03a62dab0c0537a',
- },
-})
-gitment.render('container')
-</script>
-{% endif %}
-
 <!-- Gitalk 评论 start  -->
+
 {% if site.gitalk.enable %}
-<!-- Gitalk link  -->
+
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 
@@ -137,7 +118,9 @@ gitment.render('container')
     gitalk.render('gitalk-container');
 </script>
 {% endif %}
-<!-- Gitalk end -->
+
+<!-- Gitalk end --> 
+
 
  <!-- disqus 评论框 start  -->
 {% if site.disqus.enable %}
