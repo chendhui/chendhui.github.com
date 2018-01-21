@@ -66,8 +66,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: d726ce09d11c6855f5cb   #生成的clientID
-  clientSecret: 83d6d047e0089aa5f87612e7bd487b49e248087c  #同上
+  clientID: ebb63079c0debea434e0   #生成的clientID
+  clientSecret: 1899472009d4b9f1c89ee0e78575bf22d76e11c1  #同上
   repo: chendhui.github.io    #仓库名称
   owner: chendhui    #github用户名
   admin: chendhui
